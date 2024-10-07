@@ -1,0 +1,23 @@
+# Exported from Render on 2024-10-07T12:31:55Z
+services:
+- type: web
+  name: Full stack project
+  runtime: node
+  repo: https://github.com/Mujeem8410/Air-anb
+  plan: free
+  envVars:
+  - key: SECRET
+    sync: false
+  - key: ATLASDB_URL
+    sync: false
+  - key: CLOUD_API_SECRET
+    sync: false
+  - key: CLOUD_API_KEY
+    sync: false
+  - key: CLOUD_NAME
+    sync: false
+  region: oregon
+  buildCommand: npm install
+  startCommand: node app.js
+  autoDeploy: false
+version: "1"
