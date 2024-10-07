@@ -1,0 +1,58 @@
+<% layout("/layouts/boilerplate") %>
+
+    <body>
+        <div class="row mt-3">
+            <div class="col-8 offset-2">
+                <h3 class="mb-3">Edit your Listing</h3>
+                <form method="POST" action="/listing/<%=indetails._id%>?_method=PUT" novalidate class="needs-validation" enctype ="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" name="Listing[title]" value="<%=indetails.title%>" class="form-control"
+                            required>
+                        <div class="valid-feedback"> Title-looks good!</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">description</label>
+                        <textarea type="text" name="Listing[description]"
+                            class="form-control" required><%=indetails.description%></textarea>
+                        <div class="invalid-feedback">Enter short description!</div>
+                    </div class="mb-3">
+                    <div>
+                    Original Image <br>
+                    <img src="<%=originalImage1%>" alt="">
+
+                </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Upload new Image</label>
+                        <input type="file" name="Listing[image]" class="form-control" >
+
+                    </div>
+                    <div class="row ">
+                        <div class="mb-3 col-md-4">
+                            <label for="price" class="form-label">Price</label>
+                            <input type="text" name="Listing[price]" value="<%=indetails.price%>" class="form-control"
+                                required>
+                            <div class="invalid-feedback">Price should be something</div>
+                        </div>
+                        <div class="mb-3 col-md-8">
+                            <label for="Country" class="form-label">Country</label>
+                            <input type="text" name="Listing[Country]" value="<%=indetails.Country%>"
+                                class="form-control" required>
+                            <div class="invalid-feedback">Country should be valid!</div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Loaction" class="form-label">Location</label>
+                        <input type="text" name="Listing[Location]" value="<%=indetails.Location%>" class="form-control"
+                            required>
+                        <div class="invalid-feedback">Location should be valid!</div>
+                    </div>
+
+                    <button class="btn mt-3 edit-btn mb-3">Edit</button>
+
+                </form>
+            </div>
+        </div>
+        <script src="/js/script.js"></script>
+     
+    </body>
