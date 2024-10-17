@@ -82,6 +82,11 @@ app.use((req, res, next) => {
 });
 
 app.use('/listing', listingrouter);
+app.get('/search', async (req, res) => {
+    const { title } = req.query;
+    const listings = await Listing.find({ title: { $regex: title, $options: 'i' } }); 
+    res.render('listing/index.ejs', { alllisting: listings });
+});
 app.use("/listing/:id/reviews", reviewsrouter);
 app.use("/", userrouter);
 
