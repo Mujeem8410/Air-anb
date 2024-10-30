@@ -105,6 +105,6 @@ app.use((err, req, res, next) => {
     res.status(statuscode).render("error.ejs", { message });
 });
 
-app.listen(8080, () => {
-    console.log("App is listening on 8080");
+app.listen(8085, () => {
+    console.log("App is listening on 8085");
 });
