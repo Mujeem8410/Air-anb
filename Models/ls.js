@@ -1,5 +1,5 @@
 
-const { ref } = require("joi");
+const { ref, required } = require("joi");
 const Review = require('./review.js');
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
@@ -10,6 +10,10 @@ const listingSchema = new Schema(
             required: true,
         },
         description: String,
+        category:{
+            type:String,
+            required:true,
+        },
         image: {
             url:String,
             filename:String,

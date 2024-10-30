@@ -31,6 +31,10 @@
       align-items: center;
       margin-top:1.9rem;
     }
+    a{
+      text-decoration: none;
+      color: black;
+    }
   
   </style>
   
@@ -38,74 +42,88 @@
 
 <div id="filters">
   <div class="filter">
+    <a href="/cat?category=Trending">
      <div>
       <i class="fa-solid fa-fire"></i>
      </div>
-     <p>Trending</p>
+     <p>Trending</p></a>
 
   </div>
+
   <div class="filter">
+    <a href="/cat?category=Room">
     <i class="fa-solid fa-bed"></i>
     <div>
       <p>Room</p>
 
 
-    </div>
+    </div></a>
   </div>
   <div class="filter">
     <div>
+      <a href="/cat?category=Iconic city">
+      
       <i class="fa-solid fa-city"></i></div>
     
-        <p>Iconi city</p>
+        <p>Iconi city</a></p>
     
 
     </div>
     <div class="filter">
+      <a href="/cat?category=Mountain">
       <div><i class="fa-solid fa-mountain"></i></div>
-      <p>Room</p>
+      <p>Mountain</p></a>
 
 
     </div>
   <div class="filter">
+    <a href="/cat?category=Castles">
     <div><i class="fa-brands fa-fort-awesome"></i></div>
     
-      <p>Castles</p>
+      <p>Castles</p></a>
 
 
     
   </div>
   <div class="filter">
+    <a href="/cat?category=Amazing Pool">
     <div><i class="fa-solid fa-person-swimming"></i></div>
-      <p>Amazing Pool</p>
+      <p>Amazing Pool</p></a>
 
   </div>
   <div class="filter">
+    <a href="/cat?category=camping">
     <div><i class="fa-solid fa-campground"></i></div>
-      <p>Camping</p>
+      <p>Camping</p></a>
 
   </div>
 
   <div class="filter">
+    <a href="/cat?category=Farm">
     <div><i class="fa-solid fa-tractor"></i></div>
       <p>Farm</p>
+      </a>
 
   </div>
   <div class="filter">
+    <a href="/cat?category=Arctic">
   <div><i class="fa-solid fa-snowflake"></i></div>
-  <p>Arctic</p>
+  <p>Arctic</p></a>
 
 </div>
 <div class="filter">
+  <a href="/cat?category=Domes">
   <div><i class="fa-solid fa-igloo"></i>
   </div>
-  <p>Domes</p>
+  <p>Domes</p></a>
 
 </div>
 <div class="filter">
+  <a href="/cat?category=Boats">
   <div>
     <i class="fa-solid fa-ferry"></i>
   </div>
-  <p>Boats</p>
+  <p>Boats</p></a>
 
 </div>
 <div class="tax-toggle">
@@ -130,9 +148,10 @@
             <p class="card-text"><b>
                 <%=listing.title%>
               </b> <br>
-              <%=listing.price.toLocaleString("en-IN")%>/night
+              <%=listing.price.toLocaleString("en-IN")%>/night &nbsp;&nbsp;<b><i><%=listing.category%></i></b>
               <i class="tax-info">&nbsp;&nbsp; +18 % GST</i>
             </p>
+           
           </div>
         </div>
       </a>

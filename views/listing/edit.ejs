@@ -16,6 +16,12 @@
                         <textarea type="text" name="Listing[description]"
                             class="form-control" required><%=indetails.description%></textarea>
                         <div class="invalid-feedback">Enter short description!</div>
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Category</label>
+                            <input type="text" name="Listing[category]" value="<%=indetails.category%>" class="form-control"
+                                required>
+                            <div class="valid-feedback">Category!</div>
+                        </div>
                     </div class="mb-3">
                     <div>
                     Original Image <br>
